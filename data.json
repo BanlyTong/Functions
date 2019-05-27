@@ -1,0 +1,145 @@
+[
+{
+    "modelName": "place",
+    "documentName": "place",
+    "schema":
+    {
+        "zone": "String",
+        "title": "String",
+        "bookingTime": "Date",
+        "serveType": ["String"],
+        "address": "String",
+        "lowestPrice": "Number",
+        "photos": ["String"],
+        "meetingSurface": "Mixed",
+        "maxCapacity": "Number",
+        "description": "String",
+        "idealType": ["String"],
+        "location":
+        {
+            "lat": "Number",
+            "long": "Number"
+        },
+        "availableTime": [
+        {
+            "from": "Date",
+            "to": "Date"
+        }],
+        "conveniences": [
+        {
+            "title": "String",
+            "available": "Boolean"
+        }],
+        "equipments": [
+        {
+            "title": "String",
+            "available": "Boolean"
+        }],
+        "capabilityConfigures": [
+        {
+            "disposition": "String",
+            "overallCapacity": "Number"
+        }]
+    },
+    "unique": [],
+    "permissions": []
+},
+{
+    "modelName": "caterers",
+    "documentName": "caterers",
+    "schema":
+    {
+        "label": "String",
+        "pieces": "Number",
+        "pricePerPerson": "Number",
+        "description": "String",
+        "minGuest": "Number",
+        "maxGuest": "Number",
+        "type": ["String"],
+        "servingType": ["String"],
+        "catererStyle": ["String"],
+        "catererCulture": ["String"],
+        "included": ["String"],
+        "menu": [
+        {
+            "name": "String",
+            "mainIngredient": "String",
+            "type": ["String"],
+            "price": "Number"
+        }]
+    },
+    "unique": [],
+    "permissions": []
+},
+{
+    "modelName": "material",
+    "documentName": "material",
+    "schema":
+    {
+        "materialName": "String",
+        "description": "String",
+        "lowestPrice": "Number",
+        "options": ["String"]
+    },
+    "unique": [],
+    "permissions": []
+},
+{
+    "modelName": "services",
+    "documentName": "services",
+    "schema":
+    {
+        "type": ["String"],
+        "lowestPrice": "Number",
+        "preparationDuration": "Number",
+        "performDuration": "Number",
+        "information": "String",
+        "details": "String",
+        "options": ["String"]
+    },
+    "unique": [],
+    "permissions": []
+},
+{
+    "modelName": "staff",
+    "documentName": "staff",
+    "schema":
+    {
+        "staffTitle": "String",
+        "type": "String",
+        "description": "String",
+        "lowestPrice": "Number",
+        "minDuration": "Number",
+        "maxDuration": "Number",
+        "minAmount": "Number",
+        "maxAmount": "Number"
+    },
+    "unique": [],
+    "permissions": []
+},
+{
+    "modelName": "user",
+    "documentName": "user",
+    "schema":
+    {
+        "user_info": "Mixed",
+        "event": ["String"]
+    },
+    "unique": [],
+    "permissions": []
+},
+{
+    "modelName": "event",
+    "documentName": "event",
+    "schema":
+    {
+        "status": ["String"],
+        "placeId": "String",
+        "services": ["String"],
+        "startDatetime": "Date",
+        "endDatetime": "Date",
+        "amountOfGuest": "Number"
+    },
+    "unique": [],
+    "permissions": []
+}]

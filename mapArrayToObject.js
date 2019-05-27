@@ -1,5 +1,6 @@
-function mapArrayToObject(originArray, array, result = {}) {
-    originArray.forEach((value, i) => {
+function mapArrayToObject(originalArray, array, result = {}) {
+  const copiedArray = JSON.parse(JSON.stringify(originalArray));
+    copiedArray.forEach((value, i) => {
         if (Array.isArray(value)) {
             mapArrayToObject(value, array[i], result);
         } else {

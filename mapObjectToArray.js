@@ -1,9 +1,9 @@
-function mapObjectToArray(object, array) {
-    let result = array;
+function mapObjectToArray(object, originalArray) {
+    const result = JSON.parse(JSON.stringify(originalArray));
 
-    array.forEach((value, i) => {
+    originalArray.forEach((value, i) => {
         if (Array.isArray(value)) {
-            mapObjectToArray(object, value);
+            result[i] = mapObjectToArray(object, value);
         } else {
             result[i] = object[value];
         }
